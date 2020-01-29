@@ -1,10 +1,12 @@
 package gen.selenium.pomdemo.pageObjects;
 
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SearchPage {
+import gen.selenium.pomdemo.base.BasePage;
+
+public class SearchPage extends BasePage {
 
 	@FindBy(name = "q")
 	private WebElement searchBar;
@@ -12,9 +14,15 @@ public class SearchPage {
 	@FindBy(name = "btnK")
 	private WebElement searchButton;
 
+	/**
+	 * @param driver
+	 */
+	public SearchPage(WebDriver driver) {
+		super(driver);
+	}
+
 	public void search(String text) {
-		searchBar.clear();
-		searchBar.sendKeys(text);
-		searchBar.sendKeys(Keys.ENTER);
+		setText(searchBar, text);
+		clickEnter();
 	}
 }

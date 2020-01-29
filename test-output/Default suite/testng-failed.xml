@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="gen.selenium.page_object_model.tests.DemoTest">
+        <methods>
+          <include name="test11"/>
+          <include name="tearDown"/>
+          <include name="stop"/>
+          <include name="reportSetup"/>
+          <include name="browserSetup"/>
+        </methods>
+      </class> <!-- gen.selenium.page_object_model.tests.DemoTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
